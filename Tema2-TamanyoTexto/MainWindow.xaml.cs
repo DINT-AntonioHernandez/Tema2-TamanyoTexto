@@ -27,7 +27,19 @@ namespace Tema2_TamanyoTexto
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            salidaTxt.FontSize = 18;
+            RadioButton rd= (RadioButton)sender;
+            if(rd.Tag.ToString()=="grande")
+            {
+                salidaTxt.FontSize = "25";
+            }
+            else if(rd.Tag.ToString()=="mediano")
+            {
+                salidaTxt.FontSize = "19";
+            }
+            else
+            {
+                salidaTxt.FontSize = "16";
+            }
         }
     }
 }
